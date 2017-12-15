@@ -1,0 +1,85 @@
+1.首页
+	banner
+	产品介绍
+	用户评价
+2.技术
+3.blog
+4.联系
+	地址+地图
+	发送联系消息
+5.关于我们
+
+
+tables:
+焦点图表:   banner_table
+产品介绍表：  summary_table
+用户评价表：  evaluate_table
+
+技术文章表： tech_tables
+关于我们表： aboutus_tables
+博客表： blog_tables
+联系地址表：contract_tables
+发送数据表：form_tables
+
+
+焦点图表:   banner_table:
+id  int 
+title varchar(32) 
+description varchar(500)
+link varchar(300)
+-----------------------------
+产品介绍表：  summary_table
+id  int 
+title varchar(32)
+introduction varchar(300)
+icon_src varchar(300)
+link varchar(300)
+-----------------------------
+用户评价表：  evaluate_table
+id  int 
+title varchar(32)
+introduction varchar(300)
+icon_src varchar(300)
+-----------------------------
+技术文章表： tech_tables
+id  int 
+title varchar(32)
+introduction varchar(300)
+icon_src varchar(300)
+link varchar(300)
+-----------------------------
+关于我们表： aboutus_tables
+id  int 
+title varchar(32)
+introduction varchar(300)
+content text
+link varchar(300)
+-----------------------------
+博客表： blog_tables
+id  int 
+title varchar(32)
+introduction varchar(300)
+content text
+date varchar(32)
+auth varchar(16)
+views varchar(10)
+link varchar(300)
+pic_src varchar(300)
+-----------------------------
+联系地址表：contract_tables
+id  int 
+street varchar(64)
+phone varchar(20)
+fax varchar(20)
+email   varchar(64)
+weibo varchar(40)
+wx varchar(40)
+map ???
+
+-----------------------------
+发送数据表：form_tables
+id  int 
+name    varchar(32)
+email   varchar(64)
+subject text
+
