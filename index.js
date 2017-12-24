@@ -5,6 +5,7 @@ var cookieSession = require('cookie-session')
 var ejs = require('ejs')
 var multer = require('multer')
 var mysql = require('mysql')
+var cookieParser = require('cookie-parser')
 
 var server = express();
 
@@ -21,6 +22,7 @@ if(process.env.NODE_ENV==='development'){
 server.use(bodyParser.urlencoded({ extended: true }));
 
 // 2. cookie和session
+server.use(cookieSession)
 
 //3. 设置模板
 server.set('view engine','html')  //输出的格式
