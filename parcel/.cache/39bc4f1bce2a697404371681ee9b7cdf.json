@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"./1.css","loc":{"line":1,"column":7}},{"name":"./1.scss","loc":{"line":2,"column":7}}],"generated":{"js":"\"use strict\";\n\nrequire(\"./1.css\");\n\nrequire(\"./1.scss\");\n\nconsole.log('i am parcel');"},"hash":"bd11c72b28f5f2b548f415d905a579bc"}

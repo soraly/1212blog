@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"_css_loader"}],"generated":{"css":"h2 {\r\n    height: 30px;\r\n    line-height: 30px;\r\n    color: #c0e9a4;\r\n}","js":"\n        var reloadCSS = require('_css_loader');\n        module.hot.dispose(reloadCSS);\n        module.hot.accept(reloadCSS);\n      "},"hash":"e4a15d487d22a39320987749e6b29861"}
