@@ -21,8 +21,13 @@ if(process.env.NODE_ENV==='development'){
 //get req.query post:
 server.use(bodyParser.urlencoded({ extended: true }));
 
+//server.set('trust proxy', 1) // trust first proxy
 // 2. cookie和session
-server.use(cookieSession)
+server.use(cookieSession({
+    name: 'session',
+    keys: ['aaa', 'bbbb' ,'cccc'],
+    maxAge: 24*3600*1000 //24h
+}))
 
 //3. 设置模板
 server.set('view engine','html')  //输出的格式
@@ -37,12 +42,6 @@ server.use('/web',webRoute)
 
 //5. 静态数据
 server.use(express.static(__dirname+ '/template'))
-server.get('/',(req,res)=>{
-    res.send('hello')
-})
-server.get('/lzx',(req,res)=>{
-    res.render('1.ejs',{name: 'xiang'})
-})
 
 server.listen(8989);
 console.log('server listen on 8989');
