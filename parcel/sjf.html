@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .outer {
+            padding: 20px;
+        }
+
+        .header {
+            padding-left: 3%;
+            overflow: hidden;
+            border-bottom: 1px solid gray;
+        }
+
+        ul {
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            width: 25%;
+            overflow: hidden;
+        }
+
+        li span {
+            float: left;
+            text-align: right;
+            width: 40%;
+        }
+
+        li div {
+            margin-left: 41%;
+        }
+
+        ul li div input {
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        ul li:nth-of-type(4) {
+            display: flex;
+            overflow: hidden;
+        }
+
+        ul li:nth-of-type(4) span {
+            width: auto;
+            word-break: keep-all;
+            text-align: left;
+            padding-left: 9%;
+        }
+
+        ul li:nth-of-type(4) div {
+            width: 100%;
+            margin-left: 0;
+
+        }
+
+        ul li:nth-of-type(8) input {
+            margin-left: 9%;
+        }
+
+        div.three span {
+            width: 100px;
+            float: left;
+            text-align: right;
+        }
+
+        /* 第三行优化 */
+
+        ul li:nth-of-type(1) span,
+        ul li:nth-of-type(5) span {
+            width: 100px;
+            float: left;
+        }
+
+        ul li:nth-of-type(1) div,
+        ul li:nth-of-type(5) div {
+            margin-left: 102px;
+        }
+
+        div.three div {
+            margin-left: 102px;
+        }
+        div.three div input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="outer">
+        <div class="header">
+
+            <h2>安装信息</h2>
+        </div>
+        <div class="content">
+            <ul>
+                <!-- <li>
+                            <span>登录帐号</span>
+                            <div style="margin:5px 5px 5px 105px;border:1px solid green;width: 100%">div</div>
+                        </li> -->
+                <li>
+                    <span>account：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+
+                </li>
+                <li>
+                    <span>password：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>Runaccount：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>Runpassword：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>port：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>domain：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>path：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <i>lormessjlfjslfj</i>
+                </li>
+            </ul>
+            <div class='three'>
+                <span>ip：</span>
+                <div>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer">
+        <div class="header">
+            <h2>安装信息</h2>
+        </div>
+        <div class="content">
+            <ul>
+                <!-- <li>
+                                <span>登录帐号</span>
+                                <div style="margin:5px 5px 5px 105px;border:1px solid green;width: 100%">div</div>
+                            </li> -->
+                <li>
+                    <span>登录帐号：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+
+                </li>
+                <li>
+                    <span>登录帐号：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>登录帐号：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>登录帐号：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>端口：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>登录帐：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <span>登录帐号：</span>
+                    <div>
+                        <input type="text">
+                    </div>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <i>是否开始防护是否</i>
+                </li>
+            </ul>
+            <div class='three'>
+                <span>ip地址：</span>
+                <div>
+                    <input type="text">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
     <title>Document</title>
+    <style>
+    input:-webkit-autofill { box-shadow: 0 0 0px 1000px white inset;}
+    input:-webkit-autofill { box-shadow: 0 0 0px 1000px white inset !important;}
+    </style>
 </head>
 <body>
     <h2>login</h2>
-    <form method="post" action="/admin/login">
+    <form method="post"  action="/admin/login">
         用户名：<input type="text" name='username'> <br>
         密码：  <input type="password" name='password'> <br>
         <button>提交</button>
     </form>
+    <button onclick='getData()'>ajax</button>
+    <script>
+        function getData(){
+            console.log('start')
+            $.ajax({
+                method: 'post',
+                url: 'http://localhost:8989/getToken',
+                success: (data)=>{
+                    console.log(data,'data')
+                }
+            })
+        }
+    </script>
 </body>
 </html>
