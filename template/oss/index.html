@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script src='./oss/oss-uploader2.js'></script>
+</head>
+
+<body>
+    <form method="post" id='uploadform' action="">
+        <input id='uploadfile' type="file">
+    </form>
+    <h2>i am divider</h2>
+
+    <form action="" id='uploadform2' method='post'>
+        <input type="file" id='uploadfile2'>
+    </form>
+
+    <script>
+
+        var uploader1 = Uploader({
+            fileField: $('#uploadfile')[0],
+            form: $('#uploadform')[0],
+            fileType: 'asset',
+            assettype: 'yo.work',
+            beforeStart: function (file) {
+                //alert(file.value);
+            },
+            success: function (result) {
+                console.log(result, 'result11')
+            },
+            fail: function (error) {
+                alert(error.message);
+            }
+        });
+        $('#uploadfile').on('change', function () {
+            uploader1.submit();
+        });
+
+
+
+       var uploader2 = Uploader({
+            fileField: $('#uploadfile2')[0],
+            form: $('#uploadform2')[0],
+            fileType: 'asset',
+            assettype: 'yo.work',
+            beforeStart: function (file) {
+                //alert(file.value);
+            },
+            success: function (result) {
+                console.log(result, 'result22')
+            },
+            fail: function (error) {
+                alert(error.message);
+            }
+        });
+        $('#uploadfile2').on('change', function () {
+            uploader2.submit();
+        });
+
+    </script>
+</body>
+
+</html>

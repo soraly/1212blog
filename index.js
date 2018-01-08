@@ -40,9 +40,8 @@ var webRoute = require('./route/web')
 server.use('/admin',adminRoute)
 server.use('/web',webRoute)
 
-server.get('/test',(req,res)=>{
-    res.writeHead(200,{'Content-Type':'text/json'})
-    res.end('{"name":"fenfen"}')
+server.get('/oss',(req,res)=>{
+    res.render('oss/index.html')
 })
 var js_part = `<script type="text/javascript">
 for (var a=window.location.href.split("?")[1].split("&"),r={},i=0; i<a.length; i++) {
