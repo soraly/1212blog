@@ -382,37 +382,28 @@
             };
         },
         createHiddenField: function () {
-            var self = this, form = self.form, signature, policy;
-            signature = isExist('signature');
-            policy = isExist('policy');
+            /* 此处先判断form里有没有表单域，没有再添加的原因是，有些人使用组件时不够规范，在input的change函数中初始化uploader，*/
+            /* 导致初始化过程被加载多次，所以需要加这个判断*/
+            var self = this, form = self.form;
 
             makeInput('key')
             makeInput('x-oss-object-acl')
             makeInput('OSSAccessKeyId')
             makeInput('x-oss-security-token')
             makeInput('callback')
-            if (!signature) {
-                self.signature = document.createElement('input');
-                self.signature.type = 'hidden';
-                self.signature.name = 'signature';
-                $(self.signature).insertBefore(self.fileField);        
-            } else {
-                self.signature = signature;
-            }
-            if (!policy) {
-                self.policy = document.createElement('input');
-                self.policy.type = 'hidden';
-                self.policy.name = 'policy';
-                $(self.policy).insertBefore(self.fileField);
-            } else {
-                self.policy = policy;
-            }
+            makeInput('signature')
+            makeInput('policy')
 
             function makeInput(name){
-                self[name] = document.createElement('input');
-                self[name].type = 'hidden';
-                self[name].name = name;
-                $(self[name]).insertBefore(self.fileField);
+                var field = isExist(name);
+                if(!field){
+                    self[name] = document.createElement('input');
+                    self[name].type = 'hidden';
+                    self[name].name = name;
+                    $(self[name]).insertBefore(self.fileField);
+                }else {
+                    self[name]  = field;
+                }
             }
 
 
@@ -448,6 +439,7 @@
                     var callback = obj.data.callback_name;
                     parent[callback]({url: obj.data.url,code: 200 }, 119598);
                 }
+                uploadIframe = iframe;
             }
 
         },

@@ -20,3 +20,7 @@ body li {
 body .top-wrap ul {
   display: flex;
 }
+
+body .top-wrap ul li {
+  padding: 5px 20px;
+}

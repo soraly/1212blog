@@ -15,6 +15,9 @@ body {
     .top-wrap {
         ul {
             display: flex;
+            li {
+                padding: 5px 20px;
+            }
         }
     }
 }
