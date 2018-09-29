@@ -47,6 +47,8 @@ router.get('/login', (req, res) => {
 
 router.post('/login', (req, res) => {
     var sql = `select * from user_tables where username='${req.body.username}'`;
+    console.log(req.query,'get');
+    console.log(req.body.username,'post');
     pool.query(sql, (err, data) => {
         if (err) {
             res.status(500).end('database err')
@@ -105,13 +107,15 @@ router.post('/banners',(req,res)=>{
     var description = req.body.description;
     var link = req.body.link;
     var sql = `insert into banner_table values(null, '${title}','${description}','${link}')`
-    console.log(sql,'sql')
+    console.log(sql,'sql');
     pool.query(sql, (err, data)=>{
         if(err){
-            res.status(500).end('data wrong...' + err)
+            res.status(500).end('data wrong...' + err);
         }else {
-            console.log(data,'add-data')
-            res.redirect('/admin/banners');
+            console.log(data,'add-data');
+            res.set('Content-Type', 'text/html');
+            res.send('<script>alert(66)</script>add ok...heheda');
+            //res.redirect('/admin/banners');
         }
     })
 })
