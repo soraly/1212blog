@@ -51,7 +51,7 @@ server.use('/test', (req, res) => {
     res.send({age:20,name:'xiang'})
     // res.send('<h2>hello,xiang</h2>')
 })
-
+console.log('i just for test');
 server.use(express.static(__dirname + '/template'))
 
 server.listen(8989);
