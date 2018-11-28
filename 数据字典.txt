@@ -83,4 +83,3 @@ name    varchar(32)
 email   varchar(64)
 subject text
 
-hello,world
