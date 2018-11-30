@@ -53,6 +53,6 @@ server.use('/test', (req, res) => {
 })
 
 server.use(express.static(__dirname + '/template'))
-
+console.log('test a new way to revert code')
 server.listen(8989);
 console.log('server listen on 8989');
